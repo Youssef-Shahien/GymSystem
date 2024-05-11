@@ -1,0 +1,316 @@
+/* Start Variables */
+:root {
+  --main-color: rgb(3, 27, 78);
+  --secondary-color: rgb(20, 144, 106);
+  --third-color: rgb(0, 105, 255);
+}
+/* End Variables */
+/* Start Global Variables */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.form-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* End Global Variables */
+/* Start System From */
+.form-container {
+  background-image: url(../imgs/2-Gym.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 16;
+  position: relative;
+}
+.form-container::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 60%);
+  z-index: -1;
+}
+.offer {
+  background-color: rgb(20 144 106 / 71%);
+  padding: 30px 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 100px;
+  right: 45px;
+  color: white;
+}
+.offer h3 {
+  margin-left: 20%;
+  position: relative;
+}
+.offer h3::after {
+  content: " ";
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  left: 50%;
+  bottom: -16px;
+  background-color: black;
+  transform: translate(-65%, -10px);
+}
+.offer .sales li {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.form-content {
+  background-color: rgb(3 27 78 / 71%);
+  color: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 20px;
+  z-index: 10000;
+}
+.form-content h2 {
+  text-align: center;
+}
+.form-content form {
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.form-group label {
+  flex-basis: 30%;
+}
+.form-group input[type="text"],
+input[type="tel"],
+input[type="number"],
+select {
+  flex-basis: 70%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  color: var(--main-color);
+  font-weight: bold;
+  font-style: italic;
+}
+.form-group span {
+  background-color: white;
+  padding: 10px 35px;
+  color: var(--main-color);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0 auto;
+  border: 3px solid var(--secondary-color);
+}
+.submit-btn {
+  width: 65%;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px auto;
+  margin-bottom: 0;
+}
+/* End System From */
+/* Start Data Container */
+.data-container {
+  background-image: url(../imgs/1-Gym.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+}
+.data-content {
+  background-color: rgb(255 255 255 / 75%);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--main-color);
+  font-weight: bold;
+  margin: 50px auto;
+  text-align: center;
+  overflow: scroll;
+  height: 95%;
+  position: relative;
+}
+  .data-content .header-content {
+    border: 1px solid var(--third-color);
+    border-bottom: none;
+  }
+.data-content .header-content .search {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+.data-content .header-content .search label {
+  color: black;
+  font-size: 27px;
+  font-weight: bold;
+}
+.data-content .header-content .search input {
+  padding: 6px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 20px;
+}
+.data-content .header-content h2 {
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+}
+.data-content .header-content h2::after {
+  content: " ";
+  position: absolute;
+  width: 200px;
+  height: 3px;
+  left: 50%;
+  bottom: -16px;
+  background-color: var(--third-color);
+  transform: translate(-50%, -10px);
+}
+.data-content .header-content button {
+  color: white;
+  background-color: rgb(3 27 78 / 80%);
+  width: 75%;
+  height: 35px;
+  border: none;
+  border-radius: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.data-content .header-content button:hover {
+  background-color: var(--main-color);
+  width: 77%;
+  height: 40px;
+}
+.data-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: auto 20px;
+}
+.data-content table thead {
+  background-color: var(--third-color);
+  color: white;
+}
+.data-content table th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgb(0, 105, 255);
+  font-weight: bold;
+}
+.setting-btns{
+  width: 100%;
+  padding: 5px 15px;
+  background-color: rgb(3 27 78 / 80%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  }
+  .setting-btns:hover{
+    background-color: var(--main-color);
+    padding: 8px 18px;
+    letter-spacing: 2px;
+  }
+/* End Data Container */
+/* Start Delete Pop-up */
+.popup-container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.700);
+  z-index: 10000;
+}
+.popup-content{
+  width: 450px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 25px;
+}
+.popup-content h3{
+  font-size:21px;
+  margin-top: 25px;
+  margin-bottom: -5px;
+}
+.popup-content .sure-btns{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 75px;
+}
+.popup-content .sure-btns button{
+  width: 30%;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.popup-content .sure-btns button:hover{
+  background-color: var(--main-color);
+  padding: 8px 18px;
+  letter-spacing: 2px;
+}
+/* End Delete Pop-up */
+
+
+
+
+
+
+
+/* ------------------------------------------------- */
+/* Update and Delete button style */
+
+  /* ------------------------------------------------- */

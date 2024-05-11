@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JONY GYM</title>
+    <!-- Main Template Css File -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Normalize Css File -->
+    <link rel="stylesheet" href="css/noramlize.css" />
+    <!-- all.min Css File -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- ------------------------- -->
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="offer">
+        <h3>Offer For Short Time</h3>
+        <div class="sales">
+          <li>Buy 3 Months and Get 10% Offer</li>
+          <li>Buy 6 Months and Get 15% Offer</li>
+          <li>Buy 12 Months and Get 25% Offer</li>
+        </div>
+      </div>
+      <div class="form-content">
+        <h2>Member Registration</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="id">National ID:</label>
+            <input type="text" id="national-id" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" />
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" />
+          </div>
+          <div class="form-group">
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" />
+          </div>
+          <div class="form-group">
+            <label for="height">Height (in cm):</label>
+            <input type="number" id="height" />
+          </div>
+          <div class="form-group">
+            <label for="package">Subscription Package:</label>
+            <select name="package" id="package" onchange="getOffer()">
+              <option value="none">--Choose Subscription Package--</option>
+              <option value="body-building">Body Building</option>
+              <option value="cardio">Cardio</option>
+              <option value="body-building-cardio">
+                Body Building and Cardio
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="package">Subscription Period:</label>
+            <select name="period" id="period" onchange="getOffer()">
+              <option value="none">--Choose Subscription Period--</option>
+              <option value="1">1 Month</option>
+              <option value="3">3 Month</option>
+              <option value="6">6 Month</option>
+              <option value="12">12 Month</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="package">Coach:</label>
+            <select name="coach" id="coach">
+              <option value="none">--Choose Coach--</option>
+              <option value="youssef">Youssef</option>
+              <option value="ahmed">Ahmed</option>
+              <option value="hassan">Hassan</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount to be Paid:</label>
+            <span class="bePaid" id="amount" name="amount"> </span>
+          </div>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!-- End System From -->
+    <!-- start Data Contanier -->
+    <div class="data-container">
+      <div class="data-content">
+        <div class="header-content">
+          <h2>Members Data</h2>
+          <div class="search">
+            <button id="search-name" onclick="getSearchMood(this.id)">Search With Name</button>
+            <div>
+              <label for="sreach">Search</label>
+              <input type="text" placeholder=" Search For Members" id="search" onkeyup="searchData(this.value)"/>
+            </div>
+            <button id="search-phone" onclick="getSearchMood(this.id)">Search With Phone Number</button>
+          </div>
+          <button class="delete-all" >Delete All (<span>0</span>)</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>National ID</th>
+              <th>Phone Number</th>
+              <th>Age</th>
+              <th>Weight (kg)</th>
+              <th>Height (cm)</th>
+              <th>Subscription Type</th>
+              <th>Subscription Period</th>
+              <th>Coach</th>
+              <th>Subscription Start Date</th>
+              <th>Subscription End Date</th>
+              <th>Payment</th>
+              <th>Setting</th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+            <!-- Data Will Be Added Dynamically using JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- End Data Contanier -->
+    <!-- Delete Popup-->
+    <script src="js/app.js"></script>
+  </body>
+</html>
